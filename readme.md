@@ -142,7 +142,7 @@ Haz un `JOIN` que saque usuarios.id_usuario, usuarios.nombre, usuarios.apellido,
 - id_categoría: tipo número.
 
 Añadiremos dentro de la creación de la tabla intermedia dos claves foráneas.
-- Una que haga referencia el `id_usaurio` de la tabla intermedia con el `id_usuario` de `usuarios`
+- Una que haga referencia el `id_usuario` de la tabla intermedia con el `id_usuario` de `usuarios`
 - Una que haga referencia el `id_categoría` de la tabla intermedia con el `id_categoria` de `categorías`
 
 Podría ser algo como esto:
@@ -159,7 +159,7 @@ INSERT INTO usuarios_categorias (id_usuario, id_categoria) VALUES
 (1, 1), (1, 2), (1, 3),
 (2, 4), (2, 5),
 (3, 6), (3, 7),
-(4, 8), (4, 9), (4, 10),
+(4, 8), (4, 9), (4, 10)
 ```
 
 ### PASO 3 - Consulta para ver la unión de usuarios, roles, categorías
