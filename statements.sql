@@ -92,9 +92,9 @@ WHERE id_usuario IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 
 
 -- PASO 4
 -- Tu código aquí
-SELECT usuarios2.id_usuario, usuarios2.nombre, usuarios2.apellido, usuarios2.email, usuarios2.edad, roles.nombre_rol, categorias.nombre_categoria
-	FROM usuarios2
-	JOIN (roles, categorias) ON usuarios2.id_rol = roles.id_rol AND usuarios2.id_categoria = categorias.id_categoria;
+SELECT usr.id_usuario, usr.nombre, usr.apellido, usr.email, usr.edad, roles.nombre_rol, cat.nombre_categoria
+	FROM usuarios2 AS usr
+	JOIN (roles, categorias AS cat) ON usr.id_rol = roles.id_rol AND usr.id_categoria = cat.id_categoria;
 
 /* Relación tipo N:M */
 -- PASO 1
